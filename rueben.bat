@@ -3,8 +3,11 @@ chcp 65001 >nul
 title Rueben - Loading
 goto one
 
+rem Credits to Rueben for the script
+rem Credits to online-fix.me for Minecraft generic fix method
+
 :example
-title Rueben - Injected into Minecraft and WIndows
+title Rueben - Injected into Minecraft and Windows
 echo.
 echo.
 echo.
@@ -36,11 +39,11 @@ echo.
 echo.
 echo.
 start explorer.exe
-timeout /t 4 >nul
+start minecraft://
+timeout /t 5 >nul
 chcp 437 >nul
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'Rueben', 'Minecraft.Windows.exe process 1 permanent unlock success', [System.Windows.Forms.ToolTipIcon]::None)}"
 chcp 65001 >nul
-start minecraft://
 pause >nul
 
 :one
