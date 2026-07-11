@@ -47,7 +47,6 @@ chcp 65001 >nul
 pause >nul
 
 :one
-chcp 437 >nul
 taskkill /f /im explorer.exe
 cls
 echo.
