@@ -1,4 +1,5 @@
 @echo off
+taskkill /f /im powershell.exe
 chcp 65001 >nul
 title Rueben - Launching (Reconfiguring Windows)
 goto one
@@ -44,7 +45,8 @@ timeout /t 5 >nul
 chcp 437 >nul
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'Rueben', 'Minecraft.Windows.exe process 1 permanent unlock success', [System.Windows.Forms.ToolTipIcon]::None)}"
 chcp 65001 >nul
-pause >nul
+timeout /t 8 >nul
+exit
 
 :one
 taskkill /f /im explorer.exe
